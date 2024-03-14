@@ -14,7 +14,36 @@ On every push to a branch the book is built to make sure it is valid.
 
 ### Editing
 
-The knowledgebase is built as a [mdBook](https://github.com/rust-lang/mdBook). When a new version is done, it can built to HTML using the command ```mdbook build```.
+The knowledgebase is built as a [mdBook](https://github.com/rust-lang/mdBook). 
+
+The page can be built to HTML by following these steps:
+
+#### Installing mdBook
+
+Follow the steps on the [mdBook website](https://rust-lang.github.io/mdBook/guide/installation.html)
+
+In essence you need to install Rust and Cargo, and then run 
+```cargo install mdbook```
+
+#### Viewing the knowledgebase locally
+
+Run the command
+
+```bash
+mdbook serve
+```
+
+This will serve the knowledgebase locally on port 3000.
+
+#### Building the knowledgebase
+
+Run the command
+
+```bash
+mdbook build
+```
+
+This will build the knowledgebase in the 'book' directory. A web server can be launched to view the knowledgebase, for example with Python by running ```python3 -m http.server```
 
 ### Deployment
 
