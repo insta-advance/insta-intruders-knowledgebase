@@ -2,9 +2,21 @@
 
 ## Cards
 
-Some RFID cards have vulnerabilities, allowing them to be cloned or manipulated. Notably Mifare Classic has been cracked, allowing Mifare Classic cards to be cloned using a specific tool, such as a Flipper Zero or a Proxmark 3.
+Many NFC cards have vulnerabilities, allowing them to be cloned or manipulated. Notably the algorithm used in Mifare Classic has been cracked, allowing Mifare Classic cards to be cloned using a specific tool, such as a Flipper Zero or a Proxmark 3.
 
 [More information about RFID hacking](https://book.hacktricks.xyz/todo/radio-hacking/pentesting-rfid)
+
+### NFC
+
+#### Mifare Classic
+
+Many Mifare Classic cards use default keys to protect their sectors, which are included in the Flipper Zero's dictionary for example. If using the Flipper Zero, reading a card will automatically try these keys against the card.
+
+If the key used by a sector on the card is not in the dictionary, the Flipper will not be able to read it just by reading the card. Then the "Detect Reader" mode in the Flipper can be used to collect keys from a Mifare Classic reader by emulating the card using the Mfkey32 attack. After the keys are collected into the dictionary, the card can be cracked.
+
+### RFID
+
+Low-frequency RFID tags are generally quite insecure. They do not have any cryptography in them, and just broadcast their ID, which can unlock the door. These can be cloned with the Flipper Zero for example.
 
 ## Readers
 
