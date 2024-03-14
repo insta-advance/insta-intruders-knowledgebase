@@ -2,6 +2,8 @@
 
 The Insta Intruders knowledgebase is a repository for information about penetration testing. It has information about common attacks and recommended tooling to be used for these.
 
+The knowledgebase is available for reading publicly on [GitHub Pages](https://insta-advance.github.io/insta-intruders-knowledgebase/).
+
 ## Contributing
 
 If you have any suggestions about what should be added to the knowledgebase, open an issue! You can also open a pull request against the repo with your changes.
@@ -18,7 +20,7 @@ The knowledgebase is built as a [mdBook](https://github.com/rust-lang/mdBook).
 
 The page can be built to HTML by following these steps:
 
-#### Installing mdBook
+#### 
 
 Follow the steps on the [mdBook website](https://rust-lang.github.io/mdBook/guide/installation.html)
 
